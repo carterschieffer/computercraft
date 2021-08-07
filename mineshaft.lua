@@ -7,7 +7,7 @@ todo: refueling logic
 
 --]]
 
-os.loadApi('t')
+os.loadAPI('t')
 
 local depth = 0
 
