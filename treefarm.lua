@@ -18,14 +18,22 @@ if t.selectItem('minecraft:chest') then
     t.placeDown()
 end
 
+-- todo: pick up saplings before chopping
+
 t.forward()
 for z = 1, 5 do
     for x = 1, 7 do
         for y = 1, 7 do
             if z == 1 then
                 local success, block = turtle.inspectDown()
-                if success and block.name ~= 'minecraft:torch' then
+                -- if there is a block below and it's not a torch
+                if success and block.name ~= 'minecraft:torch' and block.name ~= 'minecraft:oak_sapling' then
                     t.digDown()
+                    if t.selectItem('minecraft:oak_sapling') then
+                        t.placeDown()
+                    end
+                -- else if there is empty space below
+                elseif not success then
                     if t.selectItem('minecraft:oak_sapling') then
                         t.placeDown()
                     end
