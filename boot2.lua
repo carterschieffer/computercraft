@@ -15,8 +15,8 @@ http_runs = {
         -- Advanced turtle API
         ['carterschieffer/computercraft/master/t.lua'] = 't'
 
-        -- Mineshaft program
         ['carterschieffer/computercraft/master/mineshaft.lua'] = 'mineshaft'
+        ['carterschieffer/computercraft/master/lumberjack.lua'] = 'lumberjack'
     }
 }
 
