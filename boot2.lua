@@ -14,6 +14,9 @@ http_runs = {
     github = {
         -- Advanced turtle API
         ['carterschieffer/computercraft/master/t.lua'] = 't'
+
+        -- Mineshaft program
+        ['carterschieffer/computercraft/master/mineshaft.lua'] = 'mineshaft'
     }
 }
 
