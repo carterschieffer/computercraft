@@ -12,14 +12,14 @@ Usage:
 
 http_runs = {
     github = {
-        -- utilities
-        ['carterschieffer/computercraft/master/utils.lua'] = 'utils'
+        -- Advanced turtle API
+        ['carterschieffer/computercraft/master/t.lua'] = 't'
     }
 }
 
 for service, list in pairs(http_runs) do
     for id, program in pairs(list) do
         print('Downloading '..program..' from '..service)
-        shell.run(service, "get", id, program)
+        shell.run(service, 'get', id, program)
     end
 end
