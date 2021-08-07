@@ -19,12 +19,17 @@ if t.selectItem('minecraft:chest') then
 end
 
 t.forward()
-for z = 1, 13 do
+for z = 1, 5 do
     for x = 1, 7 do
         for y = 1, 7 do
-            local success, block = turtle.inspectDown()
-            if success and block.name ~= 'minecraft:torch' then
-                t.digDown()
+            if z == 1 then
+                local success, block = turtle.inspectDown()
+                if success and block.name ~= 'minecraft:torch' then
+                    t.digDown()
+                    if t.selectItem('minecraft:oak_sapling') then
+                        t.placeDown()
+                    end
+                end
             end
 
             -- last row
@@ -52,16 +57,14 @@ for z = 1, 13 do
     end
 end
 
-
-
-
-
-
-
-
-
-            
-
+turtle.turnLeft()
+t.forward(6)
+turtle.turnLeft()
+t.forward(7)
+while not turtle.detectDown() do
+    turtle.down()
+end
+t.turnAround()
 local success, block = turtle.inspectDown()
 if success and block.name == 'minecraft:chest' then
     for i = 1, 16 do
