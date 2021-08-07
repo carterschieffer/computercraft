@@ -86,8 +86,8 @@ function up(amount)
     for i = 1, amount do
         local tries = 0
         while not turtle.up() do
-            turtle.dig()
-            turtle.attack()
+            turtle.digUp()
+            turtle.attackUp()
             sleep(0.2)
             tries = tries + 1
             if tries > 64 then
@@ -104,8 +104,8 @@ function down(amount)
     for i = 1, amount do
         local tries = 0
         while not turtle.down() do
-            turtle.dig()
-            turtle.attack()
+            turtle.digDown()
+            turtle.attackDown()
             sleep(0.2)
             tries = tries + 1
             if tries > 64 then
