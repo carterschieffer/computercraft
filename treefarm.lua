@@ -54,7 +54,7 @@ for z = 1, 5 do
                         turtle.turnRight()
                     end
                 -- last column
-                else
+                elseif x == 7 and z ~= 5 then
                     t.up()
                     t.turnAround()
                 end
